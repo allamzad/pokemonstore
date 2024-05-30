@@ -1,0 +1,447 @@
+/**
+ * Name: Allam Amzad
+ * Email: aamzad@caltech.edu
+ * Date: 5/22/2024
+ *
+ * This is the styles.css file for my Final Project Proposal Code. 
+ * This stylesheet builds the view of the Professor Oak's PokeStore
+ * listings page and the product page of each Pokemon. The goal
+ * is a fun, maximalist style to the storepage, which will be 
+ * improved upon as the stylesheet is further developed.
+ */
+
+main {
+  cursor:url("https://i.pinimg.com/originals/32/eb/23/32eb230b326ee3c76e64f619a06f6ebb.png");
+}
+body, header, main, #poke-info, #poke-info-left, #battle-stat-numbers,
+#recommended-team, #store, #refine-search, .shop-card  {
+  display: flex;
+}
+
+.poke-types p {
+  display: inline-block;
+}
+
+#recommended-team, #store {
+  flex-direction: row;
+}
+
+body, main, #poke-info-left, #refine-search, .shop-card {
+  flex-direction: column;
+}
+
+header, #poke-info, #battle-stat-numbers, #recommended-team,
+#store, #refine-search {
+  justify-content: space-around;
+}
+
+header, main {
+  align-items: center;
+}
+
+#cart, #moves {
+  background-color: white;
+}
+
+#refine-search {
+  background-color: antiquewhite;
+}
+
+#poke-info, #moves, #poke-info img, #poke-info-right section,
+#cart, .shop-card, .type-div {
+  border: solid;
+}
+
+#poke-info, #moves, #poke-info img, #poke-info-right section,
+#cart, .shop-card, .shop-card img, .type-div {
+  border-color: black;
+}
+
+.shop-card, .customize-btn, #poke-info img, #poke-info-right section,
+ #cart-add-btn, #moves button, #cart, .type-div {
+  border-radius: 10px;
+}
+
+header h1, #poke-info, #moves {
+  border-radius: 30px;
+}
+
+#poke-info, #moves, .shop-card {
+  border-width: 5px;
+}
+
+#moves button {
+  padding: 5px;
+}
+
+#poke-info img, #cart-add-btn, #cart, .customize-btn, .type-div {
+  padding: 10px;
+}
+
+#poke-info, #moves, #poke-info-right section {
+  padding: 20px;
+}
+
+#poke-info img, #refine-search, .shop-card{
+  padding: 30px;
+}
+
+#poke-info, #moves, #poke-info-right section {
+  margin: 10px;
+}
+
+#cart-add-btn, .customize-btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+body {
+  /* background-image: url("https://c.wallhere.com/photos/11/5f/Pok_mon_Pok_balls_anime_minimalism_cartoon_video_games_digital_art-1202761.jpg!d"); */
+  background-size: 100%;
+  justify-content: space-between;
+}
+
+header {
+  margin: 0;
+}
+
+h1 {
+  color: white;
+}
+
+header img {
+  justify-items: center;
+}
+
+header h1 {
+  font-size: 50px;
+  font-weight: 1000;
+  /* -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px; */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+h1, h2, h3, p, button, label, header h1 {
+  font-family: 'Press Start 2P', Verdana, sans-serif;
+}
+
+#poke-info, #moves {
+  width: 50%;
+}
+
+#poke-info h1, #listings h1, .poke-types p, h2, footer {
+  text-align: center;
+}
+
+#poke-info img {
+  width: 200px;
+  background-color: silver;
+}
+
+#poke-info-left {
+  justify-content: flex-start;
+}
+
+#poke-info-right section {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#poke-info-right h2 {
+  margin-top: 0;
+}
+
+#cart-add-btn {
+  font-size: 20px;
+}
+
+.move-selected {
+  background-color: rgb(171, 247, 171);
+}
+
+#listings {
+  width: 80%;
+  padding: 50px;
+}
+
+#recommended-team {
+  flex-wrap: wrap;
+}
+
+#cart {
+  width: 100px;
+  cursor: pointer;
+}
+
+.poke-types p {
+  color: white;
+}
+
+.poke-types {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.recommendation {
+  align-items: center;
+}
+
+hr {
+  border-color: darkgray;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
+.customize-btn {
+  font-size: 15px;
+}
+
+#page-btns {
+  display: flex;
+  justify-content: center;
+}
+
+#prev-btn {
+  margin-right: 10px;
+}
+
+#next-btn {
+  margin-left: 10px;
+}
+
+#prev-btn, #next-btn {
+  padding: 10px;
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.shop-card {
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 40%;
+}
+
+.shop-card img {
+  width: 40%;
+}
+
+.shop-card h2 {
+  color: black;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: khaki;
+}
+
+footer p {
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  accent-color: white;
+}
+
+
+#refine-search {
+  width: 20%;
+}
+
+#all-pokemon {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.search-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#shiny-btn {
+  margin-top: 10px;
+}
+
+/* Background video */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.shop-card-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.shop-card-info-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  widtH: 50%;
+}
+
+#all-pokemon-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#all-pokemon-header input {
+  width: 200px;
+}
+
+#all-pokemon-header h1 {
+  margin-right: 50px;
+}
+
+#all-pokemon-header img {
+  width: 30px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.type-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-div p {
+  margin-right: 10px;
+}
+
+.type-div img {
+  width: 30px;
+  height: 30px;
+}
+
+#clear-search {
+  padding: 5px;
+}
+
+#loading-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(245, 91, 91);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+#loading-div p {
+  font-size: 35px;
+  color: white;
+}
+
+/* Pokemon type colors.*/
+
+.normal {
+  background-color: #A8A77A;
+}
+
+.fire {
+  background-color: #EE8130;
+}
+
+.water {
+  background-color: #6390F0;
+}
+
+.electric {
+  background-color: #F7D02C;
+}
+
+.grass {
+  background-color: #7AC74C;
+}
+
+.ice {
+  background-color: #96D9D6;
+}
+
+.fighting {
+  background-color: #C22E28;
+}
+
+.poison {
+  background-color: #A33EA1;
+}
+
+.ground {
+  background-color: #E2BF65;
+}
+
+.flying {
+  background-color: #A98FF3;
+}
+
+.psychic {
+  background-color: #F95587;
+}
+
+.bug {
+  background-color: #A6B91A;
+}
+
+.rock {
+  background-color: #B6A136;
+}
+
+.ghost {
+  background-color: #735797;
+}
+
+.dragon {
+  background-color: #6F35FC;
+}
+
+.dark {
+  background-color: #705746;
+}
+
+.steel {
+  background-color: #B7B7CE;
+}
+
+.fairy {
+  background-color: #D685AD;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+CS 132 Final Proposal Code 
+
+Name: Allam Amzad
+Email: aamzad@caltech.edu
+Date: 5/22/2024
+
+HTML for the Professor Oak's Pokemon Store where users can
+build a team of 6 Pokemon and check them out. Featured on 
+this page are recommended teams from Pokemon Showdown and 
+all Pokemon in the Pokedex are below that.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokemon Product page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <!-- Source tutorial: https://www.w3schools.com/html/html_favicon.asp -->
+  <link rel="icon" href="https://i.pinimg.com/originals/32/eb/23/32eb230b326ee3c76e64f619a06f6ebb.png">
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+  <!-- Source: CDNFonts -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press Start 2P" rel="stylesheet">
+  <script src="utils.js"></script>
+  <script defer src="pokemon-store.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- Source: Behind the Voice Actors -->
+    <h1>Professor Oak's PokeShop</h1>
+    <!-- Source: Iconfinder -->
+    <img id="cart" src="https://cdn.icon-icons.com/icons2/851/PNG/512/Shopping_Bag_icon-icons.com_67506.png" alt="Pokemon Cart">
+  </header>
+
+  <main id="store">
+    <video autoplay muted loop>
+      <source src="media/waterfall.mp4" type="video/mp4"> 
+    </video>
+    <div id="listings">
+      <div id="listings-header">
+        <!-- <h1>Pokemon Shop</h1> -->
+      </div>
+      <!-- Full recommended team not added yet-->
+      <hr>
+      <h1>Recommended Team</h1>
+      <section id="recommended-team"></section>
+      <hr>
+      <div id="all-pokemon-header">
+        <h1>All Pokemon</h1>
+        <input type="text" placeholder="Search...">
+        <img src="media/pokesearch.png" alt="search-enter">
+        <button id="clear-search">Clear Search</button>
+      </div>
+      <section id="all-pokemon">
+        <div id="loading-div">
+          <img src="media/loading.gif" alt="loading">
+          <p id="loading">Loading...</p>
+        </div>
+      </section>
+      <div id="page-btns">
+        <button id="prev-btn">Prev Page</button>
+        <button id="next-btn">Next Page</button>
+      </div>
+    </div>
+    <aside id="refine-search">
+      <h2>Refine Search</h2>
+    </aside>
+  </main>
+  <footer>
+    <!-- Contact Us information needs to be added. -->
+    <p>
+      Data from 
+      <a href="https://pokeapi.co/" target="_blank">PokeApi</a>
+    </p>
+    <img src="https://i.pinimg.com/originals/32/eb/23/32eb230b326ee3c76e64f619a06f6ebb.png" alt="pokeball">
+  </footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+CS 132 Final Proposal Code 
+
+Name: Allam Amzad
+Email: aamzad@caltech.edu
+Date: 5/22/2024
+
+HTML for a hard-coded product page from Professor Oak's 
+Pokemon Store. This page features the stats, types,
+strengths and weaknesses (to be added), and 
+base stats of a Pokemon. Pokemon moves can be 
+customized and the shiny type of a Pokemon can be 
+chosen. Users can add Pokemon to the cart from this
+page.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Magikarp was chosen for hard-coded purposes. It is a simple Pokemon. -->
+    <title>Magikarp</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <!-- Source: CDNFonts -->
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+    <script defer src="pokemon.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- Source: Behind the Voice Actors -->
+      <img src="https://gamepress.gg/pokemonmasters/sites/pokemonmasters/files/2020-02/ch0137_00_orchid1_256.ktx_.png" alt="Professor Oak">
+      <h1>Professor Oak's PokeShop</h1>
+      <!-- Source: Iconfinder -->
+      <img id="cart" src="https://cdn.icon-icons.com/icons2/851/PNG/512/Shopping_Bag_icon-icons.com_67506.png" alt="Pokemon Cart">
+    </header>
+    
+    <main>
+      <div id="poke-info">
+        <div id="poke-info-left">
+          <section id="frame" >
+            <h2>Magikarp</h2>
+            <!-- Source: PokeAPI -->
+            <img src="imgs/magikarp.svg" alt="Magikarp">
+          </section>
+          <button id="shiny-btn">Toggle Shiny Pokemon</button>
+        </div>
+        <div id="poke-info-right">
+          <section class="poke-types">
+            <h2>Types</h2>
+            <p class="water">Water</p>
+          </section>
+          <!-- Strengths and weaknesses will be added here. -->
+          <section id="stats">
+            <h2>Information</h2>
+            <p>Pokedex Id: <span id="pokedex-id">129</span></p>
+            <p>Height: <span id="height">9</span> decimeters</p>
+            <p>Weight: <span id="weight">100</span> hectograms</p>
+          </section>
+          <section id="battle-stats">
+            <h2>Base stats</h2>
+            <div id="battle-stat-numbers">
+              <div>
+                <p>Hp: <span id="hp">20</span></p>
+                <p>Attack: <span id="atk">10</span></p>
+                <p>Defense: <span id="def">55</span></p>
+              </div>
+              <div>
+                <p>Special Attack: <span id="sp-atk">15</span></p>
+                <p>Special Defense: <span id="sp-def">20</span></p>
+                <p>Speed: <span id="speed">80</span></p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <section id="moves">
+        <h2>Moves</h2>
+        <button class="move-selected">Tackle</button>
+        <button>Hydro-pump</button>
+        <button class="move-selected">Splash</button>
+        <button class="move-selected">Flail</button>
+        <button class="move-selected">Bounce</button>
+      </section>
+      <button id="cart-add-btn">Add to PokeCart</button>
+    </main>
+    
+    <footer>
+      <!-- Contact Us information needs to be added. -->
+      <p>
+        Data from 
+        <a href="https://pokeapi.co/api/v2/pokemon/magikarp" target="_blank">PokeApi</a>
+      </p>
+    </footer>
+  </body>
+</html>
