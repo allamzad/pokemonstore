@@ -2,9 +2,10 @@
 // 1. Load required modules
 const express = require("express");
 const fs = require("fs/promises");
+const cors = require("cors");
 const app = express();
 app.use(express.static("public"));
-
+app.use(cors());
 
 // 2. Add routes and other middleware and functions here
 app.get("/teams", async (req, res, next) => {

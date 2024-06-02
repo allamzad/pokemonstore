@@ -70,11 +70,11 @@ header h1, #poke-info, #moves {
   border-width: 5px;
 }
 
-#moves button {
+#moves button, .type-div {
   padding: 5px;
 }
 
-#poke-info img, #cart-add-btn, #cart, .customize-btn, .type-div {
+#poke-info img, #cart-add-btn, #cart, .customize-btn {
   padding: 10px;
 }
 
@@ -342,6 +342,7 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .type-div p {

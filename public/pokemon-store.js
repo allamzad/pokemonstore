@@ -11,7 +11,8 @@
 (function() {
     "use strict";
 
-    const BASE_URL = "https://pokeapi.co/api/v2/"; 
+    const POKEAPI_BASE_URL = "https://pokeapi.co/api/v2/"; 
+    const SHOWDOWN_BASE_URL = "https://intense-ridge-26550-80b2918ffe04.herokuapp.com/"
     const NUM_POKEMON = 1025;
     const POKEMON_PER_PAGE = 9;
 
@@ -57,7 +58,7 @@
         allPokemon = [];
         filteredTypes = [];
         for (let i = 1; i <= NUM_POKEMON; i++) {
-            let resp = await fetch(BASE_URL + "pokemon/" + i, {
+            let resp = await fetch(POKEAPI_BASE_URL + "pokemon/" + i, {
                 method: "GET"
             })
             .then(checkStatus)
@@ -473,7 +474,7 @@
     /* -------------------- Pokemon Showdown Functions -------------------- */  
 
     async function getRecommendationTeams() {
-        let resp = await fetch("http://localhost:8000/teams", {
+        let resp = await fetch(SHOWDOWN_BASE_URL + "teams", {
             method: "GET"
         })
         .then(checkStatus)
