@@ -1,81 +1,182 @@
 <!DOCTYPE html>
 <!--
-CS 132 Final Proposal Code 
+CS 132 Final Project HTML Code
 
 Name: Allam Amzad
 Email: aamzad@caltech.edu
-Date: 5/22/2024
+Date: 6/14/2024
 
 HTML for the Professor Oak's Pokemon Store where users can
-build a team of 6 Pokemon and check them out. Featured on 
-this page are recommended teams from Pokemon Showdown and 
-all Pokemon in the Pokedex are below that.
+build a team of 6 Pokemon and purchase them. Featured on 
+this page are also recommended teams from Pokemon Showdown and 
+all Pokemon from the Pokedex are below that, which the user
+can filter with the search and type checkboxes.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pokemon Product page</title>
+  <title>Pokemon Store Page</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <!-- Source tutorial: https://www.w3schools.com/html/html_favicon.asp -->
-  <link rel="icon" href="https://i.pinimg.com/originals/32/eb/23/32eb230b326ee3c76e64f619a06f6ebb.png">
-  <!-- Source: CDNFonts -->
+  <!-- Source favicon tutorial: https://www.w3schools.com/html/html_favicon.asp -->
+  <!-- Source: CurseForge, Author: xXj355Xx
+       [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+  <link rel="icon" href="media/pokeball.png">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Press Start 2P" rel="stylesheet">
+  <!-- Source: Google Fonts, Author: CodeMan38
+       [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+  <link href="https://fonts.googleapis.com/css?family=Press%20Start%202P" rel="stylesheet">
+  <!-- Source: CDN Fonts, Author: Unknown Designer
+       [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
   <script src="utils.js"></script>
   <script defer src="pokemon-store.js"></script>
 </head>
 
 <body>
   <header>
-    <!-- Source: Behind the Voice Actors -->
-    <h1>Professor Oak's PokeShop</h1>
-    <!-- Source: Iconfinder -->
+    <h1>Professor Oak's Pokeshop</h1>
+    <!-- Source: Iconfinder, Author: Ramy Wafaa Wadee Abdou Bektor 
+      [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
     <img id="cart" src="https://cdn.icon-icons.com/icons2/851/PNG/512/Shopping_Bag_icon-icons.com_67506.png" alt="Pokemon Cart">
   </header>
 
-  <main id="store">
+  <main>
+    <p id="message-area" class="hidden"></p>
     <video autoplay muted loop>
+      <!-- Source: DeviantArt, Author: 1TZAH
+      [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
       <source src="media/waterfall.mp4" type="video/mp4"> 
     </video>
-    <div id="listings">
-      <div id="listings-header">
-        <!-- <h1>Pokemon Shop</h1> -->
+
+    <!-- Store Listings Section -->
+    <section id="store">
+      <div id="listings">
+        <div id="listings-header">
+        </div>
+        <hr>
+        <h2>Pokemon Showdown Recommended Team</h2>
+        <section id="recommended-team"></section>
+        <hr>
+        <div id="all-pokemon-header">
+          <h2>All Pokemon</h2>
+          <input id="search-input" type="text" placeholder="Search...">
+          <!-- Source: Facebook, Author: PokeHunt
+          [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+          <img src="media/pokesearch.png" alt="search-enter">
+          <button id="clear-search">Clear Search</button>
+        </div>
+        <section id="all-pokemon"></section>
+        <div id="page-btns">
+          <button id="prev-btn">Prev Page</button>
+          <button id="next-btn">Next Page</button>
+        </div>
       </div>
-      <!-- Full recommended team not added yet-->
-      <hr>
-      <h1>Recommended Team</h1>
-      <section id="recommended-team"></section>
-      <hr>
-      <div id="all-pokemon-header">
-        <h1>All Pokemon</h1>
-        <input type="text" placeholder="Search...">
-        <img src="media/pokesearch.png" alt="search-enter">
-        <button id="clear-search">Clear Search</button>
-      </div>
-      <section id="all-pokemon">
-        <div id="loading-div">
-          <img src="media/loading.gif" alt="loading">
-          <p id="loading">Loading...</p>
+      <aside id="refine-search">
+        <h2>Refine Search</h2>
+      </aside>
+    </section>
+
+    <!-- Product View Section -->
+    <section id="pokemon-product" class="hidden">
+      <section id="poke-info">
+        <div id="poke-info-left">
+          <section id="frame" >
+          </section>
+          <button id="shiny-btn">Toggle Shiny Pokemon</button>
+        </div>
+        <div id="poke-info-right">
+          <!-- Source of type images: Bulbagarden, Author: Pokemon
+          [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+          <section id="poke-types"></section>
+          <section id="stats">
+            <h2>Information</h2>
+            <p>Pokedex Id: <span id="pokedex-id">0</span></p>
+            <p>Height: <span id="height">0</span> decimeters</p>
+            <p>Weight: <span id="weight">0</span> hectograms</p>
+          </section>
+          <section id="battle-stats">
+            <h2>Base stats</h2>
+            <p>Hp: <span id="hp">0</span></p>
+            <p>Attack: <span id="atk">0</span></p>
+            <p>Defense: <span id="def">0</span></p>
+            <p>Special Attack: <span id="sp-atk">0</span></p>
+            <p>Special Defense: <span id="sp-def">0</span></p>
+            <p>Speed: <span id="speed">0</span></p>
+          </section>
         </div>
       </section>
-      <div id="page-btns">
-        <button id="prev-btn">Prev Page</button>
-        <button id="next-btn">Next Page</button>
+      <section id="moves"></section>
+      <section id="product-btns">
+        <button id="product-back-btn">Back to Shop</button>
+        <button id="cart-add-btn">Add to PokeCart</button>
+      </section>
+      <p id="added-to-cart" class="hidden">Pokemon added to cart!</p>
+      <section id="comments">
+        <h2>Comments</h2>
+        <div id="user-comment">
+          <textarea id="comment-msg" name="user-message"></textarea>
+          <button id="comment-btn">Submit Comment</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Cart View Section -->
+    <section id="cart-view" class="hidden">
+      <div id="cart-header">
+        <h2>Pokemon Cart</h2>
+        <!-- Source: Vecteezy, Author: xileodesigns
+          [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+        <img src="media/close.png" alt="close-cart">
       </div>
-    </div>
-    <aside id="refine-search">
-      <h2>Refine Search</h2>
-    </aside>
+      <div id="cart-pokemon"></div>
+      <button id="purchase">Purchase Pokemon</button>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-view" class="hidden">
+      <div id="contact-header">
+        <h2>Contact Us</h2>
+        <!-- Source: Vecteezy, Author: xileodesigns
+          [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+        <img src="media/close.png" alt="close-form">
+      </div>
+      <!-- Source: Tumblr, Author: ipokemonmemes
+          [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+      <img src="media/oak.gif" alt="Professor Oak gif">
+      <form method="get" id="contact-form">
+        <div class="form-entry">
+          <label>Name: </label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-entry">
+          <label>Email: </label>
+          <input type="email" name="email">
+        </div>
+        <div class="form-entry">
+          <label>Message: </label>
+          <textarea  name="message" required></textarea>
+        </div>
+        <div class="form-entry">
+          <input type="submit" value="Submit" id="contact-submit-btn">
+        </div>
+      </form>
+      <p id="contact-response" class="hidden"></p>
+    </section>
   </main>
+
   <footer>
-    <!-- Contact Us information needs to be added. -->
-    <p>
-      Data from 
-      <a href="https://pokeapi.co/" target="_blank">PokeApi</a>
-    </p>
-    <img src="https://i.pinimg.com/originals/32/eb/23/32eb230b326ee3c76e64f619a06f6ebb.png" alt="pokeball">
+    <button id="contact">Contact Us!</button>
+    <div id="accreditations">
+      <p>
+        Images and Data from 
+        <a href="https://pokeapi.co/" target="_blank">PokeApi</a>
+      </p>
+      <!-- Source: CurseForge, Author: xXj355Xx
+       [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)] -->
+      <img src="media/pokeball.png" alt="pokeball">
+    </div>
   </footer>
 </body>
 </html>

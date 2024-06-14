@@ -1,0 +1,59 @@
+﻿Name: Allam Amzad
+Email: aamzad@caltech.edu
+Date: 6/14/2024
+
+
+Final Project Feedback
+
+
+Please fill out the following and submit with your Final Project submission 
+(added to help us know what to focus on when grading, what was intentionally incomplete, etc.):
+
+
+1. What is your estimated grade for the Final Project (roughly of 100)? For partner projects,
+   do you think the workload distribution was fair?
+
+
+I think my estimated grade for the Final Project should be about a 90 based on the effort, design, and functionality of the website. I also believe I did all the requirements. My two options were options 3 and 5. I did not work with a partner.
+
+
+2. What is your estimated grade for the course (letter grade)? You can support your
+   estimate with examples of demonstrated engagement in the course material, strengths
+   (and weaknesses) over the term, and growth throughout the material (some assignment
+   grading feedback was delayed, but we would like to know what resources you used to
+   iterate on the material, such as lectures, OH, Discord, etc.)
+
+
+I would estimate around an A range grade for the course based on my current CodePost grades, although I still have a lot ungraded, so I am not entirely sure. I think I put a lot of effort into my creative projects overall and had lots of growth throughout them. The homework assignments I tried to be as thorough as I possibly could on them. And, I also plan on submitting my engagement opportunities by Saturday night, and so I’ll have completed all the required components for my grade.
+
+
+As for my weaknesses, I would say CP4 was my weakest project because I underestimated the amount of Javascript (both client-side and server) required, and I also spent way too long deciding on an idea. Thus, the end result was kinda simple, and didn’t display my work at its best. I’ve also always been pretty weak on the front-end, but I think I’ve improved throughout the term. 
+
+
+As for my strengths, I think this project best displays what I can do in a reasonable amount of time. The project’s back-end took an immense amount of time, especially the client-side Javascript, and setting up the data for use for my server-side Javascript. But, I also spent just as much time on the front-end because I wanted something visually cool. I think the end-product is something I’m happy with overall, and comparing it to my CP1 really shows a stark difference.
+
+
+I mainly used the MDN documentation for most of the class, until we started back-end stuff, which is when the lecture slides were more useful.
+
+
+3. To what extent would you like feedback in your project (e.g. thorough, particular areas of the
+   project, or just a grade)?
+
+
+Just a grade is fine, unless there are significant deductions, which then, I would like to know why. Surface-level feedback, as a user of the website, would also be appreciated.
+
+
+4. Anything else you would like El to know when grading?
+
+
+I tried my best to organize/cite/cleanup/comment on my code as much as possible before the deadline, but it was a bit of a tight rush. 
+
+
+I also had a much larger vision for the website’s functionalities to go “above and beyond”, but I tried to prioritize the required items as the deadline approached.
+
+
+5. Are you open to sharing your project/reflection for future terms? If so, would you
+   like named credit or anonymous?
+
+
+Yes, if the project is deemed good enough for sharing, then named credit would be fine. Although, any reflection parts I would prefer to have be anonymous.
